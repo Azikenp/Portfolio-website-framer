@@ -6,6 +6,5 @@
 @layer base {
   body {
     @apply font-primary;
-
   }
 }
