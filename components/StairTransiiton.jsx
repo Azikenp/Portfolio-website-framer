@@ -1,9 +1,9 @@
 import React from 'react'
 
-const StairTransiiton = () => {
+const StairTransiton = () => {
   return (
-    <div>StairTransiiton</div>
+    <div>StairTransiton</div>
   )
 }
 
-export default StairTransiiton
+export default StairTransiton
