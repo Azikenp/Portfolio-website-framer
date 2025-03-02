@@ -1,3 +1,4 @@
+import Social from "@/components/Socials";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -26,9 +27,11 @@ export default function Home() {
                 className="uppercase flex items-center gap-2 justify-center"
               >
                 <span>Download CV</span>
-                <FiDownload />
+                <FiDownload className="text-xl" />
               </Button>
-              <div>socials</div>
+              <div className="mb-8 xl:mb-0">
+                <Social />
+              </div>
             </div>
           </div>
 
