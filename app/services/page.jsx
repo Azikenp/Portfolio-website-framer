@@ -45,9 +45,30 @@ const Services = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
           }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
-          {services.map((item, index) => (
-            <div>{item.title}</div>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-1 flex-col justify-center gap-6 group"
+            >
+              {/* top */}
+              <div>
+                <div>{service.num}</div>
+                <Link href={service.href}>
+                  <BsArrowDownRight />
+                </Link>
+              </div>
+
+              {/* title */}
+              <h2>{service.title}</h2>
+
+              {/* description */}
+              <p>{service.description}</p>
+
+              {/* border */}
+              <div className="border-b border-white/20 w-full" />
+            </div>
           ))}
         </motion.div>
       </div>
