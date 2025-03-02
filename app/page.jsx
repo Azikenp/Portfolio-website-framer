@@ -1,3 +1,4 @@
+import Photo from "@/components/Photo";
 import Social from "@/components/Socials";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
@@ -39,7 +40,9 @@ export default function Home() {
           </div>
 
           {/* photo */}
-          <div>photo</div>
+          <div>
+            <Photo />
+          </div>
         </div>
       </div>
     </section>
