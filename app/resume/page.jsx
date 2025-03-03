@@ -85,32 +85,32 @@ const education = {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto harum placeat necessitatibus.",
   items: [
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
     {
-      institution: "TOnline Course Platform",
+      institution: "Online Course Platform",
       position: "Full Stack Web Development Bootcamp",
       duration: "2023",
     },
@@ -189,12 +189,47 @@ const Resume = () => {
 
             {/* education */}
             <TabsContent value="education" className="w-full">
-              education
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <div className="text-4xl font-bold">{education.title}</div>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {education.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {education.items.map((item, i) => (
+                      <li
+                        key={i}
+                        className="bg-[#232329] h-[184px] py-6 px-10  rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          {/* dot */}
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="text-white/60">{item.institution}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
 
             {/* skills */}
-            <TabsContent value="skills" className="w-full">
-              skills
+            <TabsContent value="skills" className="w-full h-full">
+              <div className="flex flex-col gap-[30px]">
+                <div>
+                  <h3>{skills.title}</h3>
+                  <p>{skills.description}</p>
+                </div>
+                <ul>{skills.skillList.map((skill, i) => (
+                  <li key ={i}>
+                    
+                  </li>
+                ))}</ul>
+              </div>
             </TabsContent>
 
             {/* about */}
