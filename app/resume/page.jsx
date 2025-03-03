@@ -1,8 +1,17 @@
 "use client";
 
-import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  FaCss3,
+  FaFigma,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
 
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const about = {
   title: "About Me",
@@ -110,6 +119,7 @@ const skills = {
     { icon: <SiNextdotjs />, name: "next.js" },
     { icon: <SiTailwindcss />, name: "tailwind css" },
     { icon: <FaNodeJs />, name: "node.js" },
+    { icon: <FaFigma />, name: "figma" },
   ],
 };
 
