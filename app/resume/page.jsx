@@ -59,6 +59,35 @@ const experience = {
   ],
 };
 
+const education = {
+  icon: "/assets/resume/cap.svg",
+  title: "My education",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto harum placeat necessitatibus.",
+  items: [
+    {
+      institution: "TOnline Course Platform",
+      position: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "TOnline Course Platform",
+      position: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "TOnline Course Platform",
+      position: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "TOnline Course Platform",
+      position: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+  ],
+};
+
 const Resume = () => {
   return <div>Resume</div>;
 };
