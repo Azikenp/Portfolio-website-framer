@@ -91,7 +91,19 @@ const Contact = () => {
           </div>
           {/* info */}
           <div className="flex flex-1 items-center xl:justify-center order-1 xl:order-none mb-8 xl:mb-0">
-            <div>info</div>
+            <ul>
+              {info.map((item, index) => (
+                <li key={index}>
+                  <div>
+                    <div>{item.icon}</div>
+                  </div>
+                  <div>
+                    <p>{item.title}</p>
+                    <h3>{item.description}</h3>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
