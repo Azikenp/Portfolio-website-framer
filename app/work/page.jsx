@@ -2,15 +2,20 @@
 
 import {
   Tooltip,
+  TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { TooltipContent } from "@radix-ui/react-tooltip";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowRight, BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; 
+import "swiper/css/navigation"; 
+import "swiper/css/pagination";
+
 
 const projects = [
   {
@@ -120,9 +125,19 @@ const Work = () => {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, i) => (
-                <SwiperSlide key={i} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20" ></div>
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    {/* overlay */}
+                    <div></div>
+                    {/* image */}
+                    <Image
+                      src={project.image}
+                      fill
+                      alt="image"
+                      className="object-cover"
+                    />
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
