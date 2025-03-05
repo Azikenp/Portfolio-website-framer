@@ -27,7 +27,7 @@ const Stairs = () => {
           variants={stairAnimation}
           initial="initial"
           animate="animate"
-          // exit="exit"
+          exit="exit"
           transition={{
             duration: 0.4,
             ease: "easeInOut",
